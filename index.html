@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин мобильных телефонов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 100px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #contact a {
+            color: #000000;
+            text-decoration: underline;
+        }
+        .search-result {
+            background-color: #FFFF99;
+        }
+
+        #search-form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #search-input {
+            padding: 8px;
+            width: 200px;
+        }
+
+        #search-button {
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #about, #contact {
+            margin-top: 20px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Магазин мобильных телефонов "ТелеPhone"</h1>
+</header>
+
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="new.html">Новости и акции</a>
+    <a href="photo.html">Фотографии товаров</a>
+</nav>
+<section id="search-form">
+    <form action="#" method="get" onsubmit="return validateSearchForm();">
+        <label for="search-input">Поиск товара:</label>
+        <input type="text" id="search-input" name="search" placeholder="Введите название товара">
+        <button type="submit" id="search-button">Искать</button>
+    </form>
+</section>
+<section>
+    <h2>Популярные товары</h2>
+    <div class="product" id="product1">
+        <h3>Apple iPhone 15 Pro Max</h3>
+        <p>Apple iPhone 15 Pro Max имеет крупный дисплей, который характеризуется уменьшенными рамками. Его максимальная яркость достигает 2000 нит, а за счет поддержки адаптивной частоты обновления смартфон можно назвать очень энергоэффективным. За время тестирования мы не наблюдали каких-либо в читабельности в любых условиях.</p>
+        <p>Характеристики:</p>
+        <p>Дисплей: 6.7" OLED - 1290 x 2796</p>
+        <p>Чип: Apple A17 Pro</p>
+        <p>Камера: 4 (48 MP + 12 MP + 12 MP)</p>
+        <p>Батарея: 4441 мАч</p>
+        <p>OS: iOS 17.1</p>
+        <p>Вес: 221 г.</p>
+    </div>
+    <div class="product" id="product2">
+        <h3>Samsung Galaxy S23 Ultra</h3>
+        <p>Samsung Galaxy S23 Ultra получил яркий LTPO-дисплей с адаптивной частотой обновления до 120 Гц, который наносит минимум вреда глазам пользователям. Максимальной яркости более чем достаточно, но и в ночное время минимальная яркость не доставляет неудобств. Вырез в дисплее никак не мешает пользоваться смартфоном, а альтернативным способом ввода является S Pen. Смартфон поддерживает отображение HDR-контента, однако Dolby Vision здесь нет.</p>
+        <p>Характеристики:</p>
+        <p>Дисплей: 6.8" Dynamic AMOLED - 1440 x 3088</p>
+        <p>Чип: Snapdragon 8 Gen 2 Mobile Platform for Galaxy</p>
+        <p>Камера: 4 (200 MP + 10 MP + 10 MP + 12 MP)</p>
+        <p>Батарея: 5000 мАч</p>
+        <p>OS: Android 14</p>
+        <p>Вес: 233 г.</p>
+    </div>
+    <div class="product" id="product3">
+        <h3>Xiaomi 13 Pro</h3>
+        <p>Xiaomi 13 Pro гордится своим OLED-дисплеем, характерной чертой которого является адаптивная частота обновления. Максимально он выдает 120 Гц, но когда нет необходимости, смартфон может сбрасывать частоту до 1 Гц, что позволяет уменьшить нагрузку на процессор, а значит улучшить его автономность. Яркости панели более чем достаточно, цветопередача радует глаз, а мерцание пикселей не вызывает неприятных ощущений.</p>
+        <p>Характеристики:</p>
+        <p>Дисплей: 6.73" OLED - 1440 x 3200</p>
+        <p>Чип: Qualcomm Snapdragon 8 Gen 2</p>
+        <p>Камера: 3 (50.3 MP + 50 MP + 50 MP)</p>
+        <p>Батарея: 4820 мАч</p>
+        <p>OS: Android 13</p>
+        <p>Вес: 229 г.</p>
+    </div>
+    <div class="product" id="product4">
+        <h3>Xiaomi Poco X4 Pro 5G</h3>
+        <p>Xiaomi Poco X4 Pro 5G получил достойный AMOLED-дисплей с высокой пиковой яркость около 1200 нит. Он имеет повышенную частоту обновления, включая сенсор, что улучшает реакцию на касания пальца. Панель защищена прочным стеклом Gorilla Glass. Экран лишен поддержки HDR10, но зато цветопередача соответствует цветовому диапазону DCI-P3, что говорит о хорошей точности отражения цветов.</p>
+        <p>Характеристики:</p>
+        <p>Дисплей: 6.67" AMOLED - 1080 x 2400</p>
+        <p>Чип: Qualcomm Snapdragon 695</p>
+        <p>Камера: 3 (108 MP + 8 MP + 2 MP)</p>
+        <p>Батарея: 5000 мАч</p>
+        <p>OS: Android 13</p>
+        <p>Вес: 205 г.</p>
+    </div>
+    <div class="product" id="product5">
+        <h3>Google Pixel 6a</h3>
+        <p>Google Pixel 6a получил дисплей, который отлично себя ведет под прямыми лучами солнца. При этом минимальная яркость не будет слепить при использовании ночью. Из недостатков можно выделить стандартную частоту обновления 60 Гц, тогда как у конкурентов минимум по 90 Гц. Точность цветопередачи более чем достаточная, а с контрастом не возникает никаких проблем.</p>
+        <p>Характеристики:</p>
+        <p>Дисплей: 6.1" OLED - 1080 x 2400</p>
+        <p>Чип: Google Tensor</p>
+        <p>Камера: 2 (12.2 MP + 12 MP)</p>
+        <p>Батарея: 4410 мАч</p>
+        <p>OS: Android 14</p>
+        <p>Вес: 178 г.</p>
+    </div>
+</section>
+<script>
+    function scrollToProduct() {
+        var searchTerm = document.getElementById('search-input').value.toLowerCase();
+        var products = document.querySelectorAll('.product');
+        // Проходим по товарам и ищем совпадение с поисковым запросом
+        for (var i = 0; i < products.length; i++) {
+            var productName = products[i].querySelector('h3').innerText.toLowerCase();
+            if (productName.includes(searchTerm)) {
+                // Найден товар, выделяем его и прокручиваем к нему
+                products[i].classList.add('search-result');
+                products[i].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                // Если товар не соответствует запросу, убираем выделение
+                products[i].classList.remove('search-result');
+            }
+        }
+    }
+
+    function validateSearchForm() {
+        var searchTerm = document.getElementById('search-input').value.trim();
+
+        if (searchTerm === "") {
+            alert("Введите название товара для поиска.");
+            return false; // Запретить отправку формы
+        }
+        // Если поле поиска не пустое, вызываем функцию прокрутки
+        scrollToProduct();
+        return true; // Разрешить отправку формы
+    }
+</script>
+<section id="about">
+    <h2>О нас</h2>
+    <p>Мы - ваш надежный партнер в мире мобильных технологий. В нашем магазине представлен широкий выбор смартфонов, аксессуаров и других гаджетов. Мы гордимся качественными продуктами и отличным обслуживанием клиентов.</p>
+</section>
+
+<section id="contact">
+    <h2>Контакты</h2>
+    <p>Магазин мобильных телефонов<br>
+        Адрес: улица Бархатная, 77<br>
+        Телефон: +7 (949) 320-90-90<br>
+        Email: zahar.zabelin@gmail.com<br>
+        Социальные сети:
+        <a href="https://vk.com/azar_jawed911" target="_blank">Вконтакте</a>
+    </p>
+</section>
+
+<footer>
+    <p>&copy; Магазин мобильных телефонов "ТелеPhone"</p>
+</footer>
+
+</body>
+</html>

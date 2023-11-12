@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотографии товаров - Магазин мобильных телефонов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 100px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .photo-item {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transform-origin: center bottom;
+            position: relative;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.1) rotate(360deg);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            display: block;
+        }
+
+        .photo-item p {
+            padding: 10px;
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        header,
+        nav,
+        section,
+        footer {
+            display: block;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        .gallery::after {
+            content: "";
+            flex: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Фотографии товаров - Магазин мобильных телефонов "ТелеPhone"</h1>
+</header>
+
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="new.html">Новости и акции</a>
+    <a href="photo.html">Фотографии товаров</a>
+</nav>
+
+<section>
+    <h2>Галерея товаров</h2>
+    <div class="gallery">
+        <div class="photo-item">
+            <img src="Iphone15.jpg" alt="Apple iPhone 15 Pro Max">
+            <p>Apple iPhone 15 Pro Max</p>
+        </div>
+
+        <div class="photo-item">
+            <img src="Samsung_Galaxy_S23_Ultra.jpg" alt="Samsung Galaxy S23 Ultra">
+            <p>Samsung Galaxy S23 Ultra</p>
+        </div>
+        <div class="photo-item">
+            <img src="Xiaomi_13_Pro.jpg" alt="Xiaomi 13 Pro">
+            <p>SXiaomi 13 Pro</p>
+        </div>
+        <div class="photo-item">
+            <img src="Xiaomi_Poco_X4_Pro_5G.jpg" alt="Xiaomi Poco X4 Pro 5G">
+            <p>Xiaomi Poco X4 Pro 5G</p>
+        </div>
+        <div class="photo-item">
+            <img src="Google_Pixel_6a.jpg" alt="Google Pixel 6a">
+            <p>Google Pixel 6a</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; Магазин мобильных телефонов "ТелеPhone"</p>
+</footer>
+
+</body>
+
+</html>
